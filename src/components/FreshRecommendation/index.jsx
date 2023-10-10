@@ -35,7 +35,9 @@ function FreshRecommendation() {
           setLimit((prev) => prev + 8);
         }}
       >
-        <button className="border border-black ">Load More</button>
+        <button className="border-2 rounded border-black p-3 font-bold hover:border-4">
+          Load More
+        </button>
       </div>
     </>
   );
