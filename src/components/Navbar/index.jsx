@@ -102,9 +102,9 @@ function Navbar() {
           <div className="absolute top-14 bg-white w-60 right-40 shadow-xl">
             <div className="arrow-up"></div>
             <ul>
-              <li className="flex items-center gap-2 px-5 py-3 hover:bg-cyan-300">
+              <li className="flex items-center justify-between gap-2 px-5 py-3 hover:bg-cyan-300">
                 English
-                <BiCheck />
+                <BiCheck className="text-3xl" />
               </li>
               <li className="flex items-center gap-2 px-5 py-3 hover:bg-cyan-300">
                 Hindi

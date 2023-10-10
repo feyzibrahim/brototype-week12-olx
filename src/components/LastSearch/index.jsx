@@ -10,14 +10,14 @@ function LastSearch() {
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft -= 1200;
+      scrollContainerRef.current.scrollLeft -= 1125;
       setIsLeft(!isLeft);
     }
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft += 1200;
+      scrollContainerRef.current.scrollLeft += 1125;
       setIsLeft(!isLeft);
     }
   };
@@ -40,6 +40,7 @@ function LastSearch() {
               return <Card data={product} key={product.id} isFeatured={true} />;
             })}
           </div>
+          {/* Left and Right Buttons */}
           {isLeft && (
             <button
               className="scroll-button right text-5xl absolute top-44  bg-white pb-3 px-1 shadow"
