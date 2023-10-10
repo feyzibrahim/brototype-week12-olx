@@ -6,14 +6,17 @@ import LastSearch from "./components/LastSearch";
 import FreshRecommendation from "./components/FreshRecommendation";
 import AppIntro from "./components/AppIntro";
 import Footer from "./components/Footer";
+import { DataProvider } from "./context/DataContext";
 
 function App() {
   return (
     <>
       <Navbar />
       <CategoryNav />
-      <LastSearch />
-      <FreshRecommendation />
+      <DataProvider>
+        <LastSearch />
+        <FreshRecommendation />
+      </DataProvider>
       <AppIntro />
       <Footer />
     </>

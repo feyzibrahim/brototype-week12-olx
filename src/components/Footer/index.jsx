@@ -1,10 +1,16 @@
 import React from "react";
+import { TiSocialFacebook } from "react-icons/ti";
+import {
+  AiOutlineInstagram,
+  AiOutlineTwitter,
+  AiOutlinePlayCircle,
+} from "react-icons/ai";
 
 function Footer() {
   return (
     <>
       <footer className="grid grid-cols-5 bg-gray-200 py-5 px-20 ">
-        <div className="">
+        <div>
           <h1 className="footer-h1">Popular Locations</h1>
           <ul>
             <li>
@@ -119,8 +125,16 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div>
-          <p>Follow Us</p>
+        <div className="flex flex-col justify-between">
+          <div>
+            <h1 className="footer-h1">Follow Us</h1>
+            <div className="flex text-2xl">
+              <TiSocialFacebook />
+              <AiOutlineInstagram />
+              <AiOutlineTwitter />
+              <AiOutlinePlayCircle />
+            </div>
+          </div>
           <div className="flex gap-1">
             <img
               src="https://statics.olx.in/external/base/img/appstore_2x.webp"

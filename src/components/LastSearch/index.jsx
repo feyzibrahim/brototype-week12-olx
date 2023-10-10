@@ -1,19 +1,12 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Card from "../Card";
+import { useData } from "../../context/DataContext";
 
 function LastSearch() {
-  let [data, setData] = useState([]);
   const scrollContainerRef = useRef(null);
   let [isLeft, setIsLeft] = useState(false);
 
-  useEffect(() => {
-    const handleAPICall = async () => {
-      const res = await fetch("https://fakestoreapi.com/products?limit=8");
-      const data = await res.json();
-      setData(data);
-    };
-    handleAPICall();
-  }, []);
+  const { data } = useData();
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
