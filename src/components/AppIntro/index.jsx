@@ -19,7 +19,7 @@ function AppIntro() {
         <p className="uppercase text-sm font-bold pt-7 pb-4">
           Get your app today
         </p>
-        <div className="flex">
+        <div className="flex gap-1">
           <img
             src="https://statics.olx.in/external/base/img/appstore_2x.webp"
             alt="App Store"

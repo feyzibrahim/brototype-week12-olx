@@ -121,7 +121,7 @@ function Footer() {
         </div>
         <div>
           <p>Follow Us</p>
-          <div className="flex">
+          <div className="flex gap-1">
             <img
               src="https://statics.olx.in/external/base/img/appstore_2x.webp"
               alt="App Store"
