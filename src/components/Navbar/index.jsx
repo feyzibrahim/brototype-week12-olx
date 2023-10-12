@@ -14,7 +14,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex px-10 py-2 bg-gray-100 items-center border-b-4 border-white shadow z-10 sticky">
+    <nav className="flex px-10 py-2 -mt-16 bg-gray-100 items-center border-b-4 border-white shadow z-20 fixed w-full">
       <div>
         <img
           src="https://logos-world.net/wp-content/uploads/2022/04/OLX-Symbol.png"
@@ -23,10 +23,15 @@ function Navbar() {
         />
       </div>
       {/* Search Location */}
-      <div className="flex items-center gap-2 border-2 border-black rounded py-2 px-2 mx-2 bg-white">
+      <div
+        className={`flex items-center gap-2 border-2 rounded py-2 px-2 mx-2 bg-white ${
+          dropDownActive ? "border-cyan-500" : "border-black"
+        }`}
+      >
         <FiSearch />
         <input
-          placeholder="India"
+          value="India"
+          placeholder="Search City, area and locality"
           className="outline-none"
           onFocus={() => toggleDropDownActive()}
           onBlur={() => toggleDropDownActive()}

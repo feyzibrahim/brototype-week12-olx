@@ -12,13 +12,15 @@ function App() {
   return (
     <>
       <Navbar />
-      <CategoryNav />
-      <DataProvider>
-        <LastSearch />
-        <FreshRecommendation />
-      </DataProvider>
-      <AppIntro />
-      <Footer />
+      <div className="mt-16">
+        <CategoryNav />
+        <DataProvider>
+          <LastSearch />
+          <FreshRecommendation />
+        </DataProvider>
+        <AppIntro />
+        <Footer />
+      </div>
     </>
   );
 }

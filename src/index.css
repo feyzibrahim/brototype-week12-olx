@@ -10,6 +10,14 @@
   @apply uppercase font-bold;
 }
 
+.category-title {
+  @apply font-bold mt-8 mb-3 hover:text-cyan-500;
+}
+
+.category-li {
+  @apply my-2 hover:text-cyan-500;
+}
+
 .arrow-up {
   position: absolute;
   top: -10px;
