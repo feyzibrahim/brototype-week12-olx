@@ -3,15 +3,15 @@ import Card from "../Card";
 import { useData } from "../../context/DataContext";
 
 function FreshRecommendation() {
-  const { data, incrementLimit, loading, error } = useData();
+  const { data, incrementLimit, error } = useData();
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-32">
-        <p>Loading...</p>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="flex items-center justify-center h-32">
+  //       <p>Loading...</p>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
