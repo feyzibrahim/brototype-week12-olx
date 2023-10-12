@@ -3,7 +3,15 @@ import Card from "../Card";
 import { useData } from "../../context/DataContext";
 
 function FreshRecommendation() {
-  const { data, incrementLimit } = useData();
+  const { data, incrementLimit, loading, error } = useData();
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-32">
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -14,11 +22,16 @@ function FreshRecommendation() {
             {data.map((product) => {
               return <Card data={product} key={product.id} />;
             })}
+            {error && (
+              <div>
+                <h1 className="text-red-500">{error}</h1>
+              </div>
+            )}
           </div>
         </div>
       )}
-      <div className="flex justify-center mb-10" onClick={incrementLimit}>
-        <button className="border-2 rounded border-black p-3 font-bold hover:border-4">
+      <div className="flex justify-center" onClick={incrementLimit}>
+        <button className="border-2 rounded border-black p-3 font-bold hover:border-4 mb-10 hover:mb-9">
           Load More
         </button>
       </div>

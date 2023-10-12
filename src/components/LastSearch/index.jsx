@@ -6,7 +6,7 @@ function LastSearch() {
   const scrollContainerRef = useRef(null);
   let [isLeft, setIsLeft] = useState(false);
 
-  const { data } = useData();
+  const { data, loading, error } = useData();
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -22,12 +22,21 @@ function LastSearch() {
     }
   };
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-32">
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
   return (
     <>
       {data && (
         <div className="m-16 bg-zinc-100 rounded py-5 px-10 relative">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl pb-3">Based on your last search</h1>
+
             <a
               className="font-bold text-sm underline hover:no-underline cursor-pointer"
               href="/"
@@ -39,6 +48,11 @@ function LastSearch() {
             {data.map((product) => {
               return <Card data={product} key={product.id} isFeatured={true} />;
             })}
+            {error && (
+              <div>
+                <h1 className="text-red-500">{error}</h1>
+              </div>
+            )}
           </div>
           {/* Left and Right Buttons */}
           {isLeft && (
